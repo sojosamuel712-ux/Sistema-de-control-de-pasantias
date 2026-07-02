@@ -1,6 +1,12 @@
 # Sistema-de-control-de-pasantias
 Sistema diseñado para organizar las asistencias y actividades realizadas por los pasantes en sus respectivas empresas.
 
+Este sistema fue diseñado para mejorar el flujo manual de los registros de pasantes y sus actividades, llevandolas a un flujo mas rapido y limpio. Usando una interfaz basica y sencilla para su facil uso por los usuarios.
+
+-Tecnologias que se usaron-
+° Frontend: HTML, CSS y JavaScript (del lado del cliente)
+° Backend: PHP y MYSQL (para procesamiento de datos, envios, consultas y base de datos)
+
 Cabe aclarar que este es solo un modelo representativo de como se veia y funcionaba.
 
 1- Los usuarios de los pasantes deben estar registrados en su correspondiente base de datos, es decir su nombre de usuario con sus respectivos datos, con exepcion de la contraseña. La cual ellos registraran manualmente para su ingreso.
