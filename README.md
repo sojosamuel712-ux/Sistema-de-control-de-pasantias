@@ -1,40 +1,46 @@
-# Sistema-de-control-de-pasantias
-Sistema diseñado para organizar las asistencias y actividades realizadas por los pasantes en sus respectivas empresas.
+# 📊 Sistema de Control de Pasantías (Caso de Estudio)
 
-Este sistema fue diseñado para mejorar el flujo manual de los registros de pasantes y sus actividades, llevandolas a un flujo mas rapido y limpio. Usando una interfaz basica y sencilla para su facil uso por los usuarios.
+**Nota sobre el repositorio:** Este proyecto es una recreación funcional y visual (Caso de Estudio) orientada al diseño de interfaz (UI/UX) y la arquitectura de software del sistema original implementado en entorno empresarial.
 
--Tecnologias que se usaron-
-° Frontend: HTML, CSS y JavaScript (del lado del cliente)
-° Backend: PHP y MYSQL (para procesamiento de datos, envios, consultas y base de datos)
+Solución web integral diseñada para automatizar, organizar y supervisar el registro de asistencias y actividades diarias realizadas por los pasantes dentro de una organización. El sistema transforma un flujo de trabajo tradicionalmente manual y propenso a errores en un proceso digital rápido, limpio y centralizado.
 
-Cabe aclarar que este es solo un modelo representativo de como se veia y funcionaba.
+🚀 Arquitectura y Flujo del Sistema
 
-1- Los usuarios de los pasantes deben estar registrados en su correspondiente base de datos, es decir su nombre de usuario con sus respectivos datos, con exepcion de la contraseña. La cual ellos registraran manualmente para su ingreso.
+ 1. Control de Acceso y Seguridad (Autenticación)
+El sistema maneja un flujo de seguridad donde los datos de los pasantes son precargados en la base de datos relacional por la administración. 
+Al ingresar por primera vez, el usuario valida su identidad y registra manualmente su contraseña personal para activar su cuenta de forma segura.
 
-<img width="1366" height="768" alt="inicio de sesion" src="https://github.com/user-attachments/assets/369f2e6e-fc40-4aff-9b0a-49ac3e9d32a6" />
+<img width="1366" height="768" alt="registro de usuario" src="https://github.com/user-attachments/assets/74f8eca1-6c87-4b99-be3d-cdac03d3c5ef" />
 
-2- Una vez los pasantes hayan registrado su contraseña personal, podran tener acceso a su cuenta.
 
-<img width="1366" height="768" alt="registro de usuario" src="https://github.com/user-attachments/assets/5e79ca5e-790b-42ec-8558-e795682b8d22" />
+<img width="1366" height="768" alt="inicio de sesion" src="https://github.com/user-attachments/assets/8f1b22e4-b7c5-49ac-bc23-1d612c8d477a" />
 
-3- Al ingresar a la cuenta te llevara al home de tu cuenta, veras un panel de bienvenida en la parte central, en la barra superior, podras notar el nombre del usuario el cual ingreso, junto con un reloj el cual marca la fecha y la ahora del dia, junto con un modulo donde podras ingresar a un apartado llamado Hoja, la cual te ayudara a mantener tu registro.
+2. Panel Principal Dinámico (Dashboard del Pasante)
+Una vez autenticado, el pasante es recibido en un Home personalizado.
+Inyección Automática de Datos: La barra superior muestra dinámicamente el nombre del usuario activo.
+Control de Tiempo: Incorpora un módulo de reloj en tiempo real que marca la fecha y la hora exacta del sistema para garantizar la precisión en los registros.
 
-<img width="1366" height="768" alt="panel del pasante" src="https://github.com/user-attachments/assets/4a4fa6fd-1185-4ba8-87a2-16736437dc1f" />
+<img width="1366" height="768" alt="panel del pasante" src="https://github.com/user-attachments/assets/55428e3f-ad1e-4cb4-9916-49b966f33f82" />
 
-4-Apartado hoja: en ella esta dividida en dos apartados, registro y vizualizacion, en registro elegiras segun la actividad de tu departamento y la que te haya asignado tu supervisor, dichas actividades pueden ser cargadas por una tabla en la base de datos para las actividades asignadas y las cuales si el caso merita, pueden ser usadas con otros grupos de pasantes.
 
-Los espacios de usuario y fecha son cargados en automatico por el sistema.
+3. Módulo "Hoja de Trabajo" (Registro y Visualización)
+Este núcleo operativo está dividido estratégicamente en dos subapartados para optimizar la experiencia de usuario:
 
-<img width="1366" height="768" alt="apartado de hoja_ usuario" src="https://github.com/user-attachments/assets/1ea983d5-ded1-4915-b886-fb142e5ecced" />
+Registro de Actividades: El pasante selecciona la actividad asignada por su supervisor. Para estandarizar los procesos, estas actividades se cargan dinámicamente desde una tabla relacional en la base de datos, permitiendo reutilizar criterios por grupos de pasantes. El sistema precarga de forma automatizada los campos de usuario y fecha actual, evitando la duplicidad o alteración de datos.
 
-5- luego de cargar tu informacion, esta se cargara en una hoja de pasantias, que cambiara dependiendo de que ente educativo rindas cuentas, la cual podras buscar y cargar si son mensuales o semanales, y exportarlas a excel o a PDF.
+Visualización y Exportación Dinámica: La información guardada se estructura en una hoja de pasantías adaptativa. El sistema permite filtrar los registros (semanales o mensuales) según los requerimientos del ente educativo correspondiente y exportar los datos directamente a formatos **Excel o PDF**.
 
-<img width="1366" height="768" alt="apartado de hoja_ usuario_ visualización" src="https://github.com/user-attachments/assets/32b1ac33-8e93-432e-b21e-3f699d7e15b0" />
+<img width="1366" height="768" alt="apartado de hoja_ usuario" src="https://github.com/user-attachments/assets/153fbd87-47e3-4440-b0d2-0f16430da76d" />
 
-6- Por otra parte, configurando una cuenta para la administracion (sistema o supervisores) donde podras vizualizar las actividades, asistencias que lleven los pasantes en el dia a dia, a través del apartado de Pasantes.
+<img width="1366" height="768" alt="apartado de hoja_ usuario_ visualización" src="https://github.com/user-attachments/assets/d0e5b593-2156-4f00-95f5-d853555d6f28" />
 
-<img width="1366" height="768" alt="panel de administrador" src="https://github.com/user-attachments/assets/def0a0e5-48eb-4508-a427-b1413a991d69" />
+4. Panel de Administración y Auditoría (Rol Supervisor)
+El sistema cuenta con un módulo exclusivo para el personal administrativo y tutores empresariales encargado del monitoreo diario.
 
-En este apartado de Pasantes podras ver su nombre y apellido, credencial y tendras un boton donde podras vizualizar de manera breve los registros que haya echo.
+A través del apartado **Pasantes**, el supervisor accede a un panel donde se listan los nombres, apellidos y credenciales del personal en entrenamiento.
 
-<img width="1366" height="768" alt="apartado de administración _ pasantes" src="https://github.com/user-attachments/assets/b9074e3a-1b87-4782-8b6c-30820939881a" />
+Incluye herramientas de consulta rápida para previsualizar los registros de actividades y asistencias de cualquier pasante con un solo clic, facilitando el seguimiento del rendimiento real.
+
+<img width="1366" height="768" alt="panel de administrador" src="https://github.com/user-attachments/assets/4c2a79ae-b0b6-44d2-8e6f-335a8a17d6ea" />
+
+<img width="1366" height="768" alt="apartado de administración _ pasantes" src="https://github.com/user-attachments/assets/979a8673-9a99-4f94-9bfc-3af38109f890" />
